@@ -41,8 +41,21 @@ body {
   opacity: 0;
 }
 
+.icon {
+  position: absolute;
+  font-size: 2em;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: .5s;
+}
+
+.item:hover .icon {
+  transform: translateY(-50%) rotate(90deg);
+}
+
 .item-tittle {
-  margin: 1em 0 1em 2em;
+  margin: 1em 2em;
 }
 
 .item-content {
