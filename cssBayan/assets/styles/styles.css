@@ -44,14 +44,15 @@ body {
 .icon {
   position: absolute;
   font-size: 2em;
-  right: 5px;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: .5s;
+  right: 0;
+  top: 0;
+  transform: translate(-10%, 10%);
+  transition: transform .5s;
 }
 
-.item:hover .icon {
-  transform: translateY(-50%) rotate(90deg);
+.item:hover .icon,
+.item-input:checked ~ .icon {
+  transform: translate(-10%, 10%) rotate(90deg);
 }
 
 .item-tittle {
@@ -66,6 +67,12 @@ body {
   margin: .5em 1em;
   max-height: 0;
   overflow: hidden;
+  transition: .5s;
+}
+
+.item:hover .item-content,
+.item-input:checked ~ .item-content {
+  max-height: 100%;
 }
 
 .item-image {
